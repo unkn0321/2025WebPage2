@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/works.css">
+    <title>MYFILE-Works</title>
+</head>
+<body>
+    <div class="BGcontainer">
+        <div class="renderLayer"></div>
+        <video autoplay muted loop preload="auto" class="BGvideo">
+            <source src="./assets/works_BG.mp4" type="video/mp4" />
+        </video>
+        <div class="navigator">
+          <div class="navTitle">
+            <h2>MYFILE</h2>
+          </div>
+          <div class="navArea">
+            <a href="./index.html">Home</a>
+            <a href="./intro.html">Intro</a>
+            <a href="./contact.html">Contact</a>
+          </div>
+        </div>
+        <div class="navRenderLayer">  
+        </div>
+        <div class="mainContainer">
+            <div class="leftArea">
+              <div class="titleDiv">
+                <h1 class="title">專案作品</h1>
+              </div>
+              <hr class="line" />
+              <div class="content">
+                <div class="contentTitle">
+                  <h2>
+                    <span style="font-size: 0.8em;">
+                      ►
+                    </span>
+                    MYFILE</h2>
+                </div>
+                <div class="contentText">
+                  <ul>
+                    <li>作品類別：網頁<span style="opacity: 0.6;font-size: 0.5em;">(113-2期中作業：自我介紹網站)</span></li>
+                    <li>色票配色：</li>
+                    <div class="colorPalette">
+                        <div id="For text shadow" style="background-color: aqua;"></div>
+                        <div id="For text color, text shadow(active), line" style="background-color: #affcff;"></div>
+                        <div id="For text shadow(hover), text color(active)" style="background-color: #2f25fa;"></div>
+                        <div id="For reder layer of left area" style="background-color: rgba(8, 26, 107, 0.99);"></div>
+                        <div id="For reder layer of page background" style="  background:linear-gradient(90deg,
+                        rgb(28, 28, 37),
+                        rgb(32, 22, 82),
+                        rgba(32, 22, 82),
+                        rgb(35, 33, 92),
+                        rgba(31, 50, 121, 0.8))"></div>
+                        <div id="For navigator background" style="background:linear-gradient(180deg,
+                        rgb(29, 21, 67),
+                        rgb(32, 22, 82),
+                        rgba(32, 22, 82),
+                        rgb(35, 33, 92),
+                        rgba(31, 50, 121, 0.8));"></div>
+                    </div> 
+                    <li>製作疑難：
+                        <ul>
+                            <li>@media響應式內容在沒有添加!important的狀態下無法作用<br>→放到CSS最尾就可以用了</li>
+                            <li>增減調修元素位置時，常會出現不明原因的空間白邊<br>→問Copilt是哪裡有問題或是直接暴力拉大尺寸</li>
+                            <li>某些自外部引入檔案的元素無法正常顯示<br>→主要都是這2個問題：尺寸設定是否正確或是路徑有沒有打對</li>
+                            <li>彈性容器的兩軸位置對齊沒有起作用<br>→在該元素的樣式裡也增加設置display:flex</li>
+                            <li>尺寸使用的單位不夠理想<br>→正在緩慢修改</li>
+                        </ul>
+                    </li>
+                    <li>製作時間：
+                        <a href="https://github.com/unkn0321/2025WebPage1/actions"
+                        style="color:aqua;" target="_blank">版本更新歷程</a><span style="opacity: 0.5;font-size: 0.3em;">-交完作業後有打算繼續做所以GitHub上的版本的製作時間是變動的</span>
+                        <br><span style="font-size: 0.2em;opacity: 0.7;">雖然最早的版本是0314但其實在作業要求公布之前都只是偶爾才會開起來丟一兩個元素進來
+                            <br>現在的樣子和大概兩周前是天差地別的(有大範圍砍掉重練過)</span>
+                        </span>
+                    </li>
+                    <li>心得思緒：<br>
+                        <span style="opacity: 0.9;font-size: 0.8em;">
+                        這個網站的用色與色調主要參照自我所創作的虛擬形象原創角色。
+                        <br>背景所使用的影片風格是抽象幾何，使其具備不帶有強烈主題傾向的泛用性。</span>
+                    </li>
+                    <li>素材使用：
+                        <ul style="list-style: none;">
+                            <li><a style="color:aqua;" target="_blank" href="https://www.pexels.com/video/a-pastel-of-yellow-liquid-forms-different-patterns-3051357/">Intro Page Background</a></li>
+                            <li><a style="color:aqua;" target="_blank" href="https://www.pexels.com/video/abstract-video-4990242/">Works Page Background</a></li>
+                            <li><a style="color:aqua;" target="_blank" href="https://www.pexels.com/video/a-close-up-of-a-white-wave-pattern-4779866/">Contact Page Background</a></li>
+                            <li><a style="color:aqua;" target="_blank" href="https://www.hcn.org/issues/54-9/climate-change-how-a-hidden-cave-can-help-scientists-understand-the-climate/">left Area Background</a></li>
+                        </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="rightArea"></div>
+        </div>
+        <video autoplay muted loop preload="auto" class="BGvideo">
+            <source src="./assets/works_BG.mp4" type="video/mp4" />
+        </video>
+      </div>
+</body>
+</html>

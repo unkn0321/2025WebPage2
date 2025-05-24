@@ -1,0 +1,378 @@
+/* margin是與外部元素的邊界距離 */
+/* padding是與內部元素的邊界距離 */
+/*'Noto Serif TC', serif*/@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200..900&display=swap');
+/*'Klee One', cursive*/@import url('https://fonts.googleapis.com/css2?family=Klee+One&family=Noto+Serif+TC:wght@200..900&display=swap');
+/*'Zen Maru Gothic', sans-serif*/@import url('https://fonts.googleapis.com/css2?family=Klee+One&family=Noto+Serif+TC:wght@200..900&family=Zen+Maru+Gothic&display=swap');
+
+body {
+    min-height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow:auto;
+  }
+  /*導覽列【圖層高度：10】*/
+  .navigator {
+    position: sticky;
+    z-index: 10;
+    top:0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    color: #affcff;
+    align-self: start;
+    align-items: center;
+    justify-content: space-between;
+    background:linear-gradient(180deg,
+    rgb(29, 21, 67),
+    rgb(32, 22, 82),
+    rgba(32, 22, 82),
+    rgb(35, 33, 92),
+    rgba(31, 50, 121, 0.8));
+    box-shadow: 
+    0 10px 20px rgba(0, 0, 0, 0.5);
+  }
+  .navTitle{
+    font-family: 'Noto Serif TC', serif;
+    text-align: center;
+    margin: 0 0 0 20px;
+    text-shadow:
+    0 0 5px aqua;
+  }
+  .navArea{
+    min-width: 50%;
+    display: flex;
+    justify-content:end;
+  }
+  .navArea a{
+    text-decoration: none;
+    color: #affcff;
+    font-family: 'Zen Maru Gothic', sans-serif;
+    font-size: 20px;
+    margin-left: 5%;
+    margin-right: 5%;
+    text-shadow:
+    0 0 5px aqua;
+    transition: text-shadow 0.25s linear,
+                transform 0.25s linear;
+  }
+  .navArea a:hover{
+    color:#affcff;
+    text-decoration: none;
+    text-shadow: 
+    0 0 2px #affcff,
+    5px 5px 10px #2f25fa,
+    5px 5px 10px #2f25fa,
+    -5px -5px 10px #2f25fa,
+    -5px -5px 10px #2f25fa,
+    -5px 5px 10px #2f25fa,
+    -5px 5px 10px #2f25fa,
+    5px -5px 10px #2f25fa,
+    5px -5px 10px #2f25fa;
+    transform: translateY(-5px);
+  }
+  .navArea a:active{
+    color: #2f25fa;
+    text-shadow: 
+    0 0 2px #2f25fa,
+    5px 5px 10px #affcff,
+    -5px -5px 10px #affcff,
+    -5px 5px 10px #affcff,
+    5px -5px 10px #affcff;
+    transform: translateY(1px);
+  }
+  
+  /*------------------------------------------------------*/
+  
+  /*頁面主要內容【圖層高度：1】*/
+  .mainContainer {
+    position: absolute;
+    z-index: 1;
+    width: 80%;
+    display: flex;
+    margin-top: 100px;
+    justify-content: center;
+    align-self: start;
+    flex-direction: row;
+    border-radius: 10px;
+    background-color: rgba(8, 52, 250, 0.5);
+    overflow: hidden;
+    animation: Pre 1s linear both; 
+  } 
+  @keyframes Pre {
+    0% {
+      opacity: 0%;
+      width: 0%;
+    }
+    100% {
+      opacity: 100%;
+      width: 80%;
+    }
+  }
+  .leftArea {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 25px;
+    min-height: 500px;
+    background-blend-mode: multiply;
+    background-color: rgba(8, 26, 107, 0.99);
+    background-image: url("https://i0.wp.com/www.hcn.org/wp-content/uploads/2023/08/caves-feature-splash.jpg?fit=2000%2C1334&quality=100&ssl=1");
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    animation: PreL 1s linear 1s both;
+  }
+  @keyframes PreL {
+    0% {
+      width: 100%;
+    }
+    100% {
+      width: 50%;
+    }
+  }
+  .titleDiv {
+    display: flex;
+    justify-self: start;
+  }
+  .title{
+    font-size: 3rem;
+    font-family: 'Noto Serif TC', serif;
+    text-align: center;
+    margin: 0 0 0 0;
+    color: #affcff;
+    text-shadow:
+    0 0 5px aqua;
+    animation: fadeInTitle 0.5s linear 2.75s both;
+  }
+  @keyframes fadeInTitle {
+    0% {
+      opacity: 0%;
+      transform: translateY(-50%);
+    }
+    100% {
+      opacity: 100%;
+      transform: translateY(0%);
+    }
+  }
+  .line{
+    width: 100%;
+    border: 1px solid #affcff;
+    animation: fadeIn 1.5s linear 1.25s both;
+  }
+  @keyframes fadeIn {
+    0% {
+      opacity: 0%;
+      width: 0%;
+      margin-right: 100%;
+    }
+    10%{
+      width: 0%;
+      margin-right: 100%;
+    }
+    50%{
+      opacity: 100%;
+    }
+    100% {
+      opacity: 100%;
+      width: 100%;
+      margin-right: 0%;
+    }
+  }
+  .content{
+    color: #affcff;
+    animation: fadeInContent 0.8s linear 3.25s both;
+  }
+  @keyframes fadeInContent {
+    0% {
+      opacity: 0%;
+      transform: translateY(-40%);
+    }
+    75%{
+      opacity: 0%;
+    }
+    100% {
+      opacity: 100%;
+      transform: translateY(0%);
+    }
+  }
+  .line{
+    width: 100%;
+    border: 1px solid #affcff;
+    animation: fadeIn 1.5s linear 1.25s both;
+  }
+  .contentTitle h2{
+    font-size: 1.5em;
+    font-family: 'Klee One', cursive;
+    margin: 0 0 0 0;
+    color: #affcff;
+    text-shadow:
+    0 0 3px aqua;
+  }
+  .contentText{
+    margin-bottom: 1.5rem;
+  }
+  .contentText p{  
+    font-family: 'Zen Maru Gothic', sans-serif;
+    margin: 0 0 0 0;
+  }
+  .contentText ul{
+    font-family: 'Zen Maru Gothic', sans-serif;
+    font-size: 1em;
+    margin: 0 0 0 0;
+    color: #affcff;
+  }
+
+  .contentText a{
+    text-decoration: none;
+    color: #affcff;
+    font-family: 'Zen Maru Gothic', sans-serif;
+    font-size: 20px;
+    text-shadow:
+    0 0 5px aqua;
+    transition: text-shadow 0.25s linear;
+  }
+  .contentText a:hover{
+    color:#affcff;
+    text-decoration: none;
+    text-shadow: 
+    0 0 2px #affcff,
+    5px 5px 10px #2f25fa,
+    5px 5px 10px #2f25fa,
+    -5px -5px 10px #2f25fa,
+    -5px -5px 10px #2f25fa,
+    -5px 5px 10px #2f25fa,
+    -5px 5px 10px #2f25fa,
+    5px -5px 10px #2f25fa,
+    5px -5px 10px #2f25fa;
+  }
+  .contentText a:active{
+    color: #2f25fa;
+    text-shadow: 
+    0 0 2px #2f25fa,
+    5px 5px 10px #affcff,
+    -5px -5px 10px #affcff,
+    -5px 5px 10px #affcff,
+    5px -5px 10px #affcff;
+  }
+  
+  .rightArea {
+    display: flex;
+    flex-direction: column;
+    min-height: 500px;
+    box-shadow: inset 10px 0 30px 0px rgba(25, 25, 26, 0.734);
+    background-image: url("https://f2.toyhou.se/file/f2-toyhou-se/images/87752917_INzgmRyEwzZtdll.png");
+    background-position: top;
+    min-width: 200px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    animation: PreR 1s linear 1s both;
+  }
+  @keyframes PreR {
+    0% {
+      min-width: 0;
+      width: 0%;
+    }
+    100% {
+      width: 50%;
+    }
+  }
+  /*-----------------------------------------------------------*/
+  
+  /*背景內容濾鏡【圖層高度：-3】*/
+  .renderLayer{
+    position: absolute;
+    z-index: -3;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    background:linear-gradient(180deg,
+      rgb(28, 28, 37),
+      rgb(32, 22, 82),
+      rgba(32, 22, 82),
+      rgb(35, 33, 92),
+      rgba(31, 50, 121, 0.8));
+    mix-blend-mode:color;
+  }
+  
+  /*背景內容【圖層高度：-4】*/
+  .BGvideo {
+    position:absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -4;
+    object-fit: cover;
+    filter: 
+    brightness(0.5)
+    contrast(2);
+  }
+  
+  /*背景內容容器【圖層高度：-5】*/
+  .BGcontainer {
+    position: absolute;
+    z-index: -5;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /*RWD*/
+  /*!!!要放最尾才會正常作用!!!*/
+  @media screen and (max-width: 684px) {
+    .mainContainer {
+      flex-direction: column ;
+      width: 60% ;
+      min-width: 400px;
+      padding: 0;
+      animation: load 1s linear both;
+    }
+    @keyframes load {
+      0%{
+        height: 0%;
+      }
+      100%{
+        height: 670px;
+      }
+    }
+    .leftArea {
+      width: 88% ;
+      min-height: 300px;
+      animation: PreLrwd 1s linear 2s both;
+    } 
+    @keyframes PreLrwd {
+      0% {
+        width: 88%;
+      }
+      100% {
+        width: 88%;
+      }
+    }
+    .rightArea {
+      width: 100%;
+      min-height: 300px;
+      animation: PreRrwd 1s linear 2s both;
+    } 
+    @keyframes PreRrwd {
+      0% {
+        width: 100%;
+      }
+      100% {
+        width: 100%;
+      }
+    }
+    .BGcontainer, .renderLayer{
+      min-height: 800px;
+    }
+  }
+  

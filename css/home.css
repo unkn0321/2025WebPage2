@@ -1,13 +1,206 @@
+/* margin是與外部元素的邊界距離 */
+/* padding是與內部元素的邊界距離 */
+/*transition: 動畫作用的屬性(例：margin、background),
+              動畫持續時間,
+              動畫速度模式,(linear: 均速, ease-in: 正向線性加速度, ease-out: 負向線性加速度, ease-in-out: 倒U型線性加速度)
+              動畫延遲時間,(trigger後晚幾秒開始動畫)
+              */
+/*animation:動畫名稱,
+            動畫持續時間,
+            動畫速度模式,(linear: 均速, ease-in: 正向線性加速度, ease-out: 負向線性加速度, ease-in-out: 倒U型線性加速度)
+            動畫延遲時間,(trigger後晚幾秒開始動畫)
+            動畫執行次數,(infinite：LOOP動畫)
+            動畫開始的方向,(normal：從左邊開始，reverse：從右邊開始，alternate：從左邊開始並來回反覆，alternate：從右邊開始並來回反覆)
+            動畫始末幀設定,(none：不設定，forwards：動畫結束後保持在最後一幀，backwards：動畫開始前保持在第一幀，both：動畫結束後保持在最後一幀，動畫開始前保持在第一幀)
+            動畫播放狀態,(running：動畫正在播放，paused：動畫暫停)
+    可搭配：@keyframes 動畫名稱{
+              動畫內容  
+            }來設定動畫的內容
+*/
+
+/*'Noto Serif TC', serif*/@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200..900&display=swap');
+/*'Klee One', cursive*/@import url('https://fonts.googleapis.com/css2?family=Klee+One&family=Noto+Serif+TC:wght@200..900&display=swap');
+/*'Zen Maru Gothic', sans-serif*/@import url('https://fonts.googleapis.com/css2?family=Klee+One&family=Noto+Serif+TC:wght@200..900&family=Zen+Maru+Gothic&display=swap');
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes span{
+  0% {
+    scale: 0;
+  }
+  100% {
+    scale:1;
+  }
+}
+@keyframes titleMove{
+  0% {
+    transform: translateY(40px);
+  }
+  50% {
+    transform: translateY(40px);
+  }
+  100% {
+    transform: translateY(-3px);
+  }
+}
+@keyframes  expand{
+  0% {
+    padding-left: 0%;
+    padding-right: 0%;
+  }
+  100% {
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+}
+
+body {
+  min-height: auto;
+  min-width: 260px;
+}
+.renderLayer{
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  background:linear-gradient(180deg,rgba(32, 22, 82, 0.9),rgba(32, 22, 82, 0.8),rgba(32, 22, 82, 0.8),rgba(82, 119, 149, 0.7),rgb(49, 163, 194,0.5));
+  mix-blend-mode:color-burn;
+  filter:brightness(0.5);
+}
+.videoContainer{
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.BGvideo{
+  position:absolute;
+  height: 100%;
+  width: 100%;
+  z-index: -2;
+  object-fit: cover;
+}
 .mainContainer {
   position: absolute;
-  z-index: -10;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  min-width: 100%;
-  min-height: 100vh;
-  background-image: url(https://images.unsplash.com/photo-1747599309107-20504ba6b8dd?q=80&w=2076&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
-  background-size: cover;
-  background-repeat: no-repeat;
+  width: inherit;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 100px 20px 100px;
+  border-radius: 1000%;
+  overflow: hidden;
+  justify-self: center;
+  align-self: center;
+  color: #affcff;
+}
+.mainContainerBG{
+  position: absolute;
+  width: 90%;
+  height: 40%;
+  z-index: 5;
+  background-color: rgba(7, 7, 7,0.85);
+  filter: blur(50px)
+  drop-shadow(0 0 10px rgba(9, 1, 254, 0.5));
+  overflow: hidden;
+}
+.titleArea{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  width: auto;
+  height: auto;
+  padding: 20px;
+  animation: fadeIn 1s linear 0.5s backwards;
+}
+.titleArea h1{
+  font-size: 4em;
+  font-family: 'Noto Serif TC', serif;
+  text-align: center;
+  margin: 0 0 0 0;
+  text-shadow:
+  0 0 5px aqua;
+  animation: titleMove 1s linear 0.5s backwards;
+}
+.titleArea h4{
+  font-size: 1.5em;
+  color: rgba(0, 255, 255, 0.604);
+  filter: blur(1px);
+  font-family: 'Klee One', cursive;
+  text-align: center;
+  margin: 0 0 0 0;
+  animation: fadeIn 1s linear 1s backwards;
+}
+.line{
+  border-style:solid ;
+  height: 0.5%;
+  color: #affcff;
+  filter: blur(0.75px);
+  margin: 0 30% 0 30%;
+  animation: span 1s ease-out backwards;
+}
+.navArea{
+  display: flex;
+  flex-direction: row;
+  row-gap: 10px;
+  justify-content:center;
+  width: auto;
+  height: auto;
+  padding: 20px;
+  animation: fadeIn 1s linear 1s backwards;
+}
+.navArea a{
+  text-decoration: none;
+  color: #affcff;
+  font-family: 'Zen Maru Gothic', sans-serif;
+  font-weight: 700;
+  font-size: 1.35em;
+  padding-left: 2%;
+  padding-right: 2%;
+  border-radius: 10px;
+  text-shadow:
+  0 0 5px aqua;
+  transition: text-shadow 0.25s linear,
+              transform 0.25s linear;
+  animation: expand 0.25s linear 1s backwards;
+}
+.navArea a:hover{
+  text-shadow: 
+  0 0 2px #affcff,
+  5px 5px 10px #2f25fa,
+  5px 5px 10px #2f25fa,
+  -5px -5px 10px #2f25fa,
+  -5px -5px 10px #2f25fa,
+  -5px 5px 10px #2f25fa,
+  -5px 5px 10px #2f25fa,
+  5px -5px 10px #2f25fa,
+  5px -5px 10px #2f25fa;
+  mix-blend-mode: overlay;
+  transform: translateY(-5px);
+}
+.navArea a:active{
+  color: #2f25fa;
+  text-shadow: 
+  0 0 2px #2f25fa,
+  5px 5px 10px #affcff,
+  -5px -5px 10px #affcff,
+  -5px 5px 10px #affcff,
+  5px -5px 10px #affcff;
+  transform: translateY(1px);
 }
