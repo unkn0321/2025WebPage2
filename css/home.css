@@ -211,7 +211,6 @@ body {
   transform: translateY(1px);
 }
 
-/* 添加新的控制類別 */
 .animation-ready {
     animation-play-state: running !important;
 }

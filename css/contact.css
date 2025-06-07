@@ -230,7 +230,7 @@ body {
     text-decoration: none;
     color: #affcff;
     font-family: 'Zen Maru Gothic', sans-serif;
-    font-size: 20px;
+    font-size: 1em;
     text-shadow:
     0 0 5px aqua;
     transition: text-shadow 0.25s linear;
@@ -260,6 +260,7 @@ body {
   }
   
   .rightArea {
+    position: relative;
     display: flex;
     flex-direction: column;
     min-height: 500px;
@@ -376,3 +377,35 @@ body {
     }
   }
   
+  /* 添加輪播按鈕樣式 */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(175, 252, 255, 0.2);
+    border: none;
+    color: #affcff;
+    font-size: 24px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 0 0 5px aqua;
+}
+
+.carousel-btn:hover {
+    background: rgba(175, 252, 255, 0.4);
+    text-shadow: 0 0 10px aqua;
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}

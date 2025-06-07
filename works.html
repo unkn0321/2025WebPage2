@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="./css/works.css">
     <link rel="stylesheet" href="./css/loading.css">
     <script src="./js/loading.js" defer></script>
+    <script src="./js/carousel_works.js" defer></script>
     <title>MYFILE-Works</title>
 </head>
 <body>
@@ -42,7 +43,7 @@
                 </div>
                 <div class="contentText">
                   <ul>
-                    <li>作品類別：網頁<span style="opacity: 0.6;font-size: 0.5em;">(113-2期中作業：自我介紹網站)</span></li>
+                    <li>作品類別：網頁<span style="opacity: 0.6;font-size: 0.5em;">(113-2期末作業：自我介紹網站更新)</span></li>
                     <li>色票配色：</li>
                     <div class="colorPalette">
                         <div id="For text shadow" style="background-color: aqua;"></div>
@@ -64,24 +65,19 @@
                     </div> 
                     <li>製作疑難：
                         <ul>
-                            <li>@media響應式內容在沒有添加!important的狀態下無法作用<br>→放到CSS最尾就可以用了</li>
-                            <li>增減調修元素位置時，常會出現不明原因的空間白邊<br>→問Copilt是哪裡有問題或是直接暴力拉大尺寸</li>
-                            <li>某些自外部引入檔案的元素無法正常顯示<br>→主要都是這2個問題：尺寸設定是否正確或是路徑有沒有打對</li>
-                            <li>彈性容器的兩軸位置對齊沒有起作用<br>→在該元素的樣式裡也增加設置display:flex</li>
-                            <li>尺寸使用的單位不夠理想<br>→正在緩慢修改</li>
+                            <li>有些功能需要動用到JavaScript<br>→去學或問AI<br><span style="opacity: 0.6;font-size: 0.5em;">(不過我也因此在某些既有的動態樣式上找到了另外一種解法，<br>挪一些部分寫進JavaScript裡的話可以在一定程度上縮小CSS的篇幅)</span></li>
                         </ul>
                     </li>
                     <li>製作時間：
-                        <a href="https://github.com/unkn0321/2025WebPage1/actions"
-                        style="color:aqua;" target="_blank">版本更新歷程</a><span style="opacity: 0.5;font-size: 0.3em;">-交完作業後有打算繼續做所以GitHub上的版本的製作時間是變動的</span>
-                        <br><span style="font-size: 0.2em;opacity: 0.7;">雖然最早的版本是0314但其實在作業要求公布之前都只是偶爾才會開起來丟一兩個元素進來
-                            <br>現在的樣子和大概兩周前是天差地別的(有大範圍砍掉重練過)</span>
+                        <a href="https://github.com/unkn0321/2025WebPage2/actions"
+                        style="color:aqua;" target="_blank">版本更新歷程</a><span style="opacity: 0.5;font-size: 0.3em;">
                         </span>
                     </li>
-                    <li>心得思緒：<br>
+                    <li>更新概要：<br>
                         <span style="opacity: 0.9;font-size: 0.8em;">
-                        這個網站的用色與色調主要參照自我所創作的虛擬形象原創角色。
-                        <br>背景所使用的影片風格是抽象幾何，使其具備不帶有強烈主題傾向的泛用性。</span>
+                        • 新增Loading畫面<br>
+                        • 原有的單一圖片展示區rightArea改為輪播展示區<br>
+                        </span>
                     </li>
                     <li>素材使用：
                         <ul style="list-style: none;">

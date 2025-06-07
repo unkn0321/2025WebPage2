@@ -241,6 +241,10 @@ body {
   background-repeat: no-repeat;
   overflow: hidden;
   animation: PreR 1s linear 1s both;
+  position: relative; /* 添加這行 */
+  background-size: cover;
+  background-position: center;
+  transition: background-image 0.5s ease-in-out;
 }
 @keyframes PreR {
   0% {
@@ -344,4 +348,37 @@ body {
   .BGcontainer, .renderLayer{
     min-height: 1200px;
   }
+}
+
+/* 添加輪播按鈕樣式 */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(175, 252, 255, 0.2);
+    border: none;
+    color: #affcff;
+    font-size: 24px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 0 0 5px aqua;
+}
+
+.carousel-btn:hover {
+    background: rgba(175, 252, 255, 0.4);
+    text-shadow: 0 0 10px aqua;
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
 }

@@ -1,23 +1,23 @@
 function createLoadingBar() {
-    const loadingContainer = document.createElement('div');
-    loadingContainer.className = 'loadingContainer';
+    const loadingContainer = document.createElement('div');// 創建loading時的全屏容器
+    loadingContainer.className = 'loadingContainer';// 定義其class為loadingContainer
     
-    const loadingBar = document.createElement('div');
-    loadingBar.className = 'loadingBar';
+    const loadingBar = document.createElement('div');// 創建loading條的容器
+    loadingBar.className = 'loadingBar';// 定義其class為loadingBar
     
-    // 新增：創建百分比顯示元素
-    const loadingPercentage = document.createElement('div');
-    loadingPercentage.className = 'loadingPercentage';
-    loadingPercentage.textContent = '0%';
+    const loadingPercentage = document.createElement('div');// 創建同步顯示loading進度的文字元素
+    loadingPercentage.className = 'loadingPercentage';// 定義其class為loadingPercentage
+    loadingPercentage.textContent = '0%';// 設定初始文字內容
     
-    const loadingProgress = document.createElement('div');
-    loadingProgress.className = 'loadingProgress';
-    
-    loadingBar.appendChild(loadingProgress);
-    loadingContainer.appendChild(loadingPercentage); // 添加百分比顯示
-    loadingContainer.appendChild(loadingBar);
-    document.body.appendChild(loadingContainer);
-    
+    const loadingProgress = document.createElement('div');// 創建loading當前進度條
+    loadingProgress.className = 'loadingProgress';// 定義其class為loadingProgress
+    loadingProgress.style.width = '0%';// 設定初始寬度為0%
+
+    document.body.appendChild(loadingContainer);// 在body中新增一個子節點給loadingContainer(父子節點關係設定)
+    loadingContainer.appendChild(loadingBar); // 在loadingContainer中新增一個子節點給loadingBar(父子節點關係設定)
+    loadingBar.appendChild(loadingProgress);// 在loadingBar中新增一個子節點給loadingProgress(父子節點關係設定)
+    loadingContainer.appendChild(loadingPercentage); // 在loadingContainer中新增一個子節點給loadingPercentage(父子節點關係設定)
+
     return { loadingContainer, loadingProgress, loadingPercentage };
 }
 
