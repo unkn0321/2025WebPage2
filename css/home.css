@@ -128,6 +128,7 @@ body {
   height: auto;
   padding: 20px;
   animation: fadeIn 1s linear 0.5s backwards;
+  animation-play-state: paused;
 }
 .titleArea h1{
   font-size: 4em;
@@ -137,6 +138,7 @@ body {
   text-shadow:
   0 0 5px aqua;
   animation: titleMove 1s linear 0.5s backwards;
+  animation-play-state: paused;
 }
 .titleArea h4{
   font-size: 1.5em;
@@ -146,6 +148,7 @@ body {
   text-align: center;
   margin: 0 0 0 0;
   animation: fadeIn 1s linear 1s backwards;
+  animation-play-state: paused;
 }
 .line{
   border-style:solid ;
@@ -154,6 +157,7 @@ body {
   filter: blur(0.75px);
   margin: 0 30% 0 30%;
   animation: span 1s ease-out backwards;
+  animation-play-state: paused;
 }
 .navArea{
   display: flex;
@@ -164,6 +168,7 @@ body {
   height: auto;
   padding: 20px;
   animation: fadeIn 1s linear 1s backwards;
+  animation-play-state: paused;
 }
 .navArea a{
   text-decoration: none;
@@ -179,6 +184,7 @@ body {
   transition: text-shadow 0.25s linear,
               transform 0.25s linear;
   animation: expand 0.25s linear 1s backwards;
+  animation-play-state: paused;
 }
 .navArea a:hover{
   text-shadow: 
@@ -203,4 +209,9 @@ body {
   -5px 5px 10px #affcff,
   5px -5px 10px #affcff;
   transform: translateY(1px);
+}
+
+/* 添加新的控制類別 */
+.animation-ready {
+    animation-play-state: running !important;
 }
