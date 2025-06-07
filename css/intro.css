@@ -235,14 +235,12 @@ body {
   min-height: 500px;
   box-shadow: inset 10px 0 30px 0px rgba(25, 25, 26, 0.734);
   background-image: url("https://f2.toyhou.se/file/f2-toyhou-se/images/93664853_GVhAY731SmRGbIL.png");
-  background-position: top;
   min-width: 200px;
   background-size: cover;
   background-repeat: no-repeat;
   overflow: hidden;
   animation: PreR 1s linear 1s both;
   position: relative; /* 添加這行 */
-  background-size: cover;
   background-position: center;
   transition: background-image 0.5s ease-in-out;
 }
