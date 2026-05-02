@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const rightArea = document.querySelector('.rightArea');
     const images = [
-        "https://scontent.ftpe9-1.fna.fbcdn.net/v/t39.30808-6/614973132_1228619779149536_2480884644601288368_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=13d280&_nc_ohc=axpomv5-Gy8Q7kNvwELsT2h&_nc_oc=Adq6RmRsgk-CxZxNM-nO3ulR0vgo5TuXblnJhkmMbNGhyXzjyQ5FAsiAyK79iAfAKJs&_nc_zt=23&_nc_ht=scontent.ftpe9-1.fna&_nc_gid=FJTwFedoLv5vk_ScxaGHQw&_nc_ss=7b2a8&oh=00_Af5s5xx1ZGIGOn5a7SGexFiC4YEGb620lBp9ku8cDEU0Bg&oe=69FB32BD",
+        "https://f2.toyhou.se/file/f2-toyhou-se/images/111868298_DWgzPZEw3X0dCJo.png",
         "https://f2.toyhou.se/file/f2-toyhou-se/images/98019376_04T3GleBHWr5X4t.png",
         "https://pbs.twimg.com/media/GUE3vm8agAAy0N6?format=jpg&name=large"
     ];
